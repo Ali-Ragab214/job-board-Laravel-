@@ -1,0 +1,14 @@
+User
+ ├── Employer (1:1)
+ └── Candidate (1:1)
+
+Employer
+ └── Jobs (1:M)
+
+Job
+ ├── Category (M:1)
+ ├── Skills (M:M)
+ └── Applications (1:M)
+
+Candidate
+ └── Applications (1:M)
