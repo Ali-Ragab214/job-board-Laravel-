@@ -43,7 +43,9 @@ return new class extends Migration
         'entry', 'mid', 'senior', 'director', 'executive'
     ])->default('entry');
 
-    $table->enum('status', ['open', 'closed'])->default('open');
+    $table->enum('status', [
+        'open', 'closed', 'draft'
+    ])->default('open');
 
     $table->date('application_deadline')->nullable();
 
