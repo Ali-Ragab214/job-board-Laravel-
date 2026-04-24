@@ -1,58 +1,50 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 🚀 Laravel Job Board Platform
 
-## About Laravel
+A full-featured **Job Board web application** built using Laravel, designed to connect employers with candidates in an efficient and scalable way.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The platform allows employers to post job opportunities, while candidates can search, filter, and apply for jobs based on their skills, experience, and preferences.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🔑 Key Features
 
-## Learning Laravel
+* 👤 Role-based system (Admin / Employer / Candidate)
+* 🏢 Employers can create and manage job listings
+* 💼 Candidates can browse jobs and submit applications
+* 📂 Resume upload and cover letter support
+* 🔍 Advanced job filtering (category, location, experience, work type)
+* 📊 Application tracking system (pending / accepted / rejected)
+* 🧠 Clean Architecture with separation of concerns (Models, Services, Repositories, DTOs)
+* 🔐 Secure authentication and authorization system
+* ⚙️ RESTful API structure ready for frontend integration
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🧱 Tech Stack
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+* Laravel (PHP Framework)
+* MySQL
+* Eloquent ORM
+* RESTful API Architecture
+* Blade (optional frontend)
+* Clean Architecture principles
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## 🎯 Project Goal
 
-```bash
-composer require laravel/boost --dev
+The goal of this project is to simulate a real-world job recruitment system with a professional backend architecture, focusing on scalability, maintainability, and best practices used in modern software companies.
 
-php artisan boost:install
-```
+---
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 💡 Highlights
 
-## Contributing
+This project demonstrates strong backend engineering skills including:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* Database design & relationships
+* Clean architecture implementation
+* Role-based access control
+* Modular and scalable code structure
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
