@@ -59,6 +59,7 @@ class CategoryRepository implements CategoryRepositoryInterface
         return (bool) optional($this->findById($id))->delete();
     }
 
+
     public function existsBySlug(string $slug): bool
     {
         return JobCategory::query()
@@ -66,6 +67,7 @@ class CategoryRepository implements CategoryRepositoryInterface
             ->exists();
     }
 
+    
     private function baseQuery(): Builder
     {
         return JobCategory::query()->with(['jobs']);
