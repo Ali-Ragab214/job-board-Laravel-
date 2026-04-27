@@ -18,7 +18,9 @@ class JobService implements JobServiceInterface
 
     public function getAllJobs(int $perPage = 15): LengthAwarePaginator
     {
-        return $this->repository->all($perPage);
+        $jobs =  $this->repository->all($perPage);
+        $jobs->getCollection()->transform(fn(Job $job) => $this->mapToDTO($job));
+        return $jobs;
     }
 
     public function getJobById(int $id): JobDTO
