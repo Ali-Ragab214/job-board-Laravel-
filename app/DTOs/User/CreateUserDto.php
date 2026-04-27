@@ -3,7 +3,7 @@ namespace App\DTOs\User;
 use App\DTOs\BaseDTO;
 use App\Enums\UserRoleEnum;
 
-class CreateUserDto extends BaseDTO
+class CreateUserDTO extends BaseDTO
 {
     public function __construct(
         public string $name,

@@ -17,3 +17,4 @@ class UserDTO extends BaseDTO
         public ?Carbon $updated_at = null,
     ) {}
 }
+
