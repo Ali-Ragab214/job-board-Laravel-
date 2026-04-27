@@ -2,6 +2,8 @@
 
 namespace App\Services\User;
 
+use App\Models\Employer;
+use App\Models\Candidate;
 use App\Repositories\User\UserRepositoryInterface;
 use App\DTOs\User\CreateUserDTO;
 use App\DTOs\User\UpdateUserDTO;
@@ -26,6 +28,14 @@ class UserService implements UserServiceInterface
         ];
 
         $user = $this->repository->create($data);
+
+        // Auto-create Employer or Candidate profile based on role
+        if ($user->role === UserRoleEnum::EMPLOYER->value) {
+            Employer::create(['user_id' => $user->id]);
+        } elseif ($user->role === UserRoleEnum::CANDIDATE->value) {
+            Candidate::create(['user_id' => $user->id]);
+        }
+
         return $this->mapToDTO($user);
     }
 
