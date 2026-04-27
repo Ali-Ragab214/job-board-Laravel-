@@ -32,3 +32,4 @@ interface UserRepositoryInterface
     
     public function findByRole(string $role): Collection;
 }
+
