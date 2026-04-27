@@ -3,7 +3,6 @@
 namespace App\DTOs;
 
 use Carbon\Carbon;
-use BackedEnum;
 
 abstract class BaseDTO
 {
@@ -12,7 +11,7 @@ abstract class BaseDTO
         $data = [];
 
         foreach (get_object_vars($this) as $key => $value) {
-            if ($value instanceof BackedEnum) {
+            if ($value instanceof \BackedEnum) {
                 $data[$key] = $value->value;
             }
             elseif ($value instanceof Carbon) {

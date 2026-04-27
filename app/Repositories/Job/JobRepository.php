@@ -3,27 +3,36 @@
 namespace App\Repositories\Job;
 
 use App\Models\Job;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Builder;
 
 class JobRepository implements JobRepositoryInterface
 {
-    public function all(int $perPage = 15)
+    protected function baseQuery(): Builder
     {
-        return Job::query()->paginate($perPage);
+        return Job::query();
     }
 
-    public function find($id): ?Job
+    public function all(int $perPage = 15): LengthAwarePaginator
     {
-        return Job::query()->find($id);
+        return $this->baseQuery()
+            ->latest('created_at')
+            ->paginate($perPage);
+    }
+
+    public function find(int $id): ?Job
+    {
+        return $this->baseQuery()->find($id);
     }
 
     public function create(array $data): Job
     {
-        return Job::query()->create($data);
+        return $this->baseQuery()->create($data);
     }
 
-    public function update($id, array $data): ?Job
+    public function update(int $id, array $data): ?Job
     {
-        $job = Job::query()->find($id);
+        $job = $this->find($id);
 
         if (!$job) {
             return null;
@@ -31,11 +40,11 @@ class JobRepository implements JobRepositoryInterface
 
         $job->update($data);
 
-        return $job; 
+        return $job;
     }
 
-    public function delete($id): bool
+    public function delete(int $id): bool
     {
-        return Job::query()->where('id', $id)->delete() > 0;
+        return (bool) optional($this->find($id))->delete();
     }
 }
