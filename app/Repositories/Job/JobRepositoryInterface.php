@@ -9,6 +9,8 @@ interface JobRepositoryInterface
 {
     public function all(int $perPage = 15): LengthAwarePaginator;
 
+    public function findByEmployerId(int $employerId, int $perPage = 15): LengthAwarePaginator;
+
     public function find(int $id): ?Job;
 
     public function create(array $data): Job;

@@ -16,6 +16,7 @@ class EmployerDTO extends BaseDTO
         public ?string $company_website = null,
         public ?string $company_location = null,
         public ?string $phone = null,
+        public bool $is_approved = false,
         public ?Carbon $created_at = null,
         public ?Carbon $updated_at = null,
     ) {}

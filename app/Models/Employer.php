@@ -15,6 +15,11 @@ class Employer extends Model
         'company_website',
         'company_location',
         'phone',
+        'is_approved',
+    ];
+
+    protected $casts = [
+        'is_approved' => 'boolean',
     ];
 
     public function user()

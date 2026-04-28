@@ -20,6 +20,14 @@ class JobRepository implements JobRepositoryInterface
             ->paginate($perPage);
     }
 
+    public function findByEmployerId(int $employerId, int $perPage = 15): LengthAwarePaginator
+    {
+        return $this->baseQuery()
+            ->where('employer_id', $employerId)
+            ->latest('created_at')
+            ->paginate($perPage);
+    }
+
     public function find(int $id): ?Job
     {
         return $this->baseQuery()->find($id);
